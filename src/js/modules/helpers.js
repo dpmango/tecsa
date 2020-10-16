@@ -101,3 +101,19 @@ function mediaCondition(cond) {
 
   return disabledBp;
 }
+
+function width(el) {
+  return parseFloat(getComputedStyle(el, null).width.replace('px', ''));
+}
+
+function height(el) {
+  return parseFloat(getComputedStyle(el, null).height.replace('px', ''));
+}
+
+function outerWidth(el) {
+  var width = el.offsetWidth;
+  var style = getComputedStyle(el);
+
+  width += parseInt(style.marginLeft) + parseInt(style.marginRight);
+  return width;
+}

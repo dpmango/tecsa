@@ -1,26 +1,21 @@
 // HEADER :: START
 header.header
-  .container
+  .header__container.js-container-align(data-position="right" data-selector=".header")
     .header__wrapper
       a(href="homepage.html").header__logo
-        +svgMono('email')
-      ul.header__menu
-        li
-          a(href="homepage.html") Homepage
-        li
-          a(href="page.html") Shop
-        li
-          a(href="page.html") Lorem
-      
+        +svgMono('logo')
+
       .header__cta
-        .header__cart
-          +svgMono('email')
-      
+        form(action="#").header__search
+          input.header__search-input(type="search")
+          button.header__search-button(type="submit")
+            +svgMono('search')
+
       .header__hamburger
         .hamburger.hamburger--squeeze(js-hamburger)
           .hamburger-box
             .hamburger-inner
-    
+
 // MOBILE NAVI
 .mobile-navi
   .mobile-navi__wrapper

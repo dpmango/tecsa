@@ -5,42 +5,53 @@
   right: 0
   left: 0
   z-index: 9
-  background: #f5f5f5
+  background: #FFF
   will-change: transform
   backface-visibility: hidden
   transform-style: preserve-3d
+  &__container
+    padding-left: 32px
   &__wrapper
     display: flex
     align-items: center
-    height: 70px
 
   &__logo
     flex: 0 0 auto
-    font-size: 35px
+    font-size: 0
     padding-right: 30px
-
-  &__menu
-    flex: 0 1 auto
-    display: flex
-    align-items: center
-    font-size: 18px
-    margin: 0 auto
-    padding: 0
-    li
-      display: inline-block
-      margin-right: 30px
-    a
-      transition: color .25s $ease
-      &:hover
-        color: tomato
+    color: $colorPrimary
+    .ico
+      font-size: 34px
 
   &__cta
+    flex: 0 1 432px
     margin-left: auto
-    padding-left: 30px
+
+  &__search
+    background: $colorBg
+    display: flex
+    align-items: center
+    padding: 10px 20px
+    font-size: 0
+  &__search-input
+    flex: 1 1 auto
+    -webkit-appearance: none
+    display: block
+    background: white
+    padding: 13px 20px
+    font-size: 16px
+    border: 0
+  &__search-button
+    -webkit-appearance: none
+    flex: 0 0 auto
+    color: $colorPrimary
+    background: transparent
+    padding: 4px 10px
+    .ico
+      font-size: 28px
 
   &__hamburger
     // display: none
-    padding-left: 20px
 
   &.is-fixed
     // should be normalized to -100% scroll at this point
@@ -66,15 +77,3 @@
     &__cta
       display: none
 
-+r($md)
-  .header
-    &__menu
-      display: none
-    &__hamburger
-      margin-left: auto
-      display: block
-
-+r($sm)
-  .header
-    &__logo
-      font-size: 30px
