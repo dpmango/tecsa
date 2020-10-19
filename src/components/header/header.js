@@ -43,16 +43,21 @@
       APP.Plugins.ScrollBlock.enableScroll();
     },
     hamburgerClickListener: function() {
-      _document.on('click', '[js-hamburger]', function() {
-        $(this).toggleClass('is-active');
-        $('.mobile-navi').toggleClass('is-active');
+      var _this = this;
+      _document
+        .on('click', '[js-hamburger]', function() {
+          $(this).toggleClass('is-active');
+          $('.mobile-navi').toggleClass('is-active');
 
-        if ($(this).is('.is-active')) {
-          APP.Plugins.ScrollBlock.disableScroll();
-        } else {
-          APP.Plugins.ScrollBlock.enableScroll();
-        }
-      });
+          if ($(this).is('.is-active')) {
+            APP.Plugins.ScrollBlock.disableScroll();
+          } else {
+            APP.Plugins.ScrollBlock.enableScroll();
+          }
+        })
+        .on('click', '.mobile-navi__background', function() {
+          _this.closeMobileMenu();
+        });
     },
     listenScroll: function() {
       _window.on('scroll', this.scrollHeader.bind(this));
