@@ -3408,6 +3408,10 @@ p + p {
   color: #040858;
 }
 
+.c-violet {
+  color: #4500CF;
+}
+
 button {
   -webkit-appearance: none;
   border: 0;
@@ -4447,14 +4451,32 @@ html.mfp-helper body {
 }
 
 .team-card {
-  max-width: 450px;
-  background: #FFFFFF;
+  display: block;
+  background: #EFEEEE;
+  -webkit-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.team-card:not(.team-card--big):hover {
   -webkit-box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5);
           box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5);
 }
 
 .team-card--big {
+  background: white;
+  max-width: 450px;
   margin-left: auto;
+  -webkit-box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5);
+          box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5);
+}
+
+.team-card:hover {
+  color: #333;
+}
+
+.team-card:hover .team-card__more {
+  color: #333;
 }
 
 .team-card__image {
@@ -4467,11 +4489,6 @@ html.mfp-helper body {
 
 .team-card__content {
   padding: 20px 20px 20px 32px;
-}
-
-.team-card__name {
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .team-card__links {
@@ -4508,6 +4525,16 @@ html.mfp-helper body {
 
 .team-card__links a:last-child:after {
   display: none;
+}
+
+.team-card__more {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 34px;
+  color: #9B9B9B;
+  -webkit-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
 }
 
 .testimonials {

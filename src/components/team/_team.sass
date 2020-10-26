@@ -42,20 +42,27 @@
 
 // team card
 .team-card
-  max-width: 450px
-  background: #FFFFFF;
-  box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5)
+  display: block
+  background: #EFEEEE
+  transition: .25s $ease
+  &:not(.team-card--big)
+    &:hover
+      box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5)
   &--big
+    background: white
+    max-width: 450px
     margin-left: auto
+    box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5)
+  &:hover
+    color: $fontColor
+    .team-card__more
+      color: $fontColor
   &__image
     font-size: 0
     img
       width: 100%
   &__content
     padding: 20px 20px 20px 32px
-  &__name
-    font-size: 18px;
-    line-height: 24px;
   &__links
     margin-top: 14px
     font-size: 14px
@@ -78,3 +85,9 @@
       &:last-child
         &::after
           display: none
+  &__more
+    font-size: 14px
+    font-weight: 700
+    line-height: 34px
+    color: #9B9B9B
+    transition: color .25s $ease
