@@ -1,0 +1,31 @@
+// CASES
+.cases
+
+
+.case-card
+  display: block
+  background: #FFFFFF
+  margin-bottom: 35px
+  box-shadow: 2px 2px 4px rgba(174, 174, 174, 0.5)
+  transition: box-shadow .25s $ease
+  &:hover
+    box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5)
+    .case-card__cta
+      color: #4500CF
+  &__image
+    font-size: 0
+    img
+      width: 100%
+  &__content
+    padding: 10px 10px 10px 16px
+  &__name
+    font-size: 18px
+    line-height: 24px
+  &__cta
+    margin-top: 12px
+    font-size: 14px
+    font-weight: 700
+    line-height: 34px
+    color: #9B9B9B
+    transition: color .25s $ease
+    &:hover

@@ -44,6 +44,21 @@
         .on('click', '[js-show-grid]', function() {
           $(this).toggleClass('is-active');
           $('.demo-grid').fadeToggle();
+        })
+        //tabs
+        .on('click', '.js-tabs-trigger a', function() {
+          var $link = $(this);
+          var $allLinks = $('.js-tabs-trigger a');
+          var $container = $link.closest('.js-tabs');
+          var dataTab = $link.data('tab');
+          var $allTabs = $container.find('.tab');
+          var $targetTab = $container.find('.tab[data-tab="' + dataTab + '"]');
+
+          $allLinks.removeClass('is-active');
+          $link.addClass('is-active');
+
+          $allTabs.hide();
+          $targetTab.fadeIn();
         });
     },
     destroy: function() {
