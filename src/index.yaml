@@ -5,3 +5,5 @@ PageList:
     ready: 60
   - file: team.html
     ready: 60
+  - file: article.html
+    ready: 60

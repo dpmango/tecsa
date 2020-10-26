@@ -7,7 +7,7 @@ import config from '../config.js';
 const task = () =>
   gulp
     .src([config.src.img + '/**/*.{jpg,png,jpeg,svg,gif}'])
-    .pipe(config.production ? cache(imagemin({ interlaced: true })) : util.noop())
+    // .pipe(config.production ? cache(imagemin({ interlaced: true })) : util.noop())
     .pipe(gulp.dest(config.dest.img));
 
 const buildImages = () => task();
