@@ -3,5 +3,5 @@ ProjectTitle: Tecsa
 PageList:
   - file: homepage.html
     ready: 60
-  - file: page.html
-    ready: 0
+  - file: team.html
+    ready: 60
