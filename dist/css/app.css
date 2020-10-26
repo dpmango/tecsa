@@ -3709,7 +3709,7 @@ html.mfp-helper body {
 }
 
 .scaler {
-  background-color: #E7E8E9;
+  background-color: #EFEEEE;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3783,7 +3783,7 @@ html.mfp-helper body {
 }
 
 .reveal:after {
-  background: #E7E8E9;
+  background: #EFEEEE;
   content: ' ';
   display: inline-block;
   pointer-events: none;
@@ -4088,7 +4088,7 @@ html.mfp-helper body {
 }
 
 .header__search {
-  background: #E7E8E9;
+  background: #EFEEEE;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4430,7 +4430,7 @@ html.mfp-helper body {
   font-size: 175px;
   font-weight: 300;
   line-height: 150px;
-  letter-spacing: -20px;
+  letter-spacing: -0.05714em;
   color: #040858;
 }
 
@@ -4590,6 +4590,11 @@ html.mfp-helper body {
   background: #4A4A4A;
   color: white;
   padding: 80px 0 70px;
+}
+
+.testimonials.bg-light {
+  background: #EFEEEE;
+  color: #333;
 }
 
 .testimonials__image {
