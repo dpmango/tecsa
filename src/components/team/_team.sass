@@ -45,12 +45,17 @@
   display: block
   background: #EFEEEE
   transition: .25s $ease
-  &:not(.team-card--big)
+  &:not(.team-card--big), &:not(.team-card--small)
     &:hover
       box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5)
   &--big
-    background: white
     max-width: 450px
+  &--small
+    max-width: 210px
+    .team-card__content
+      padding-left: 15px
+  &--big, &--small
+    background: white
     margin-left: auto
     box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5)
   &:hover

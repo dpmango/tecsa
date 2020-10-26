@@ -4418,6 +4418,29 @@ html.mfp-helper body {
   line-height: 34px;
 }
 
+.numbers__title {
+  padding: 12px 0;
+  font-size: 18px;
+  line-height: 24px;
+  border-bottom: 1px solid currentColor;
+}
+
+.numbers__num {
+  margin-bottom: 12px;
+  font-size: 175px;
+  font-weight: 300;
+  line-height: 150px;
+  letter-spacing: -20px;
+  color: #040858;
+}
+
+.numbers__num span {
+  font-size: 133px;
+  font-weight: 300;
+  line-height: 150px;
+  letter-spacing: 0;
+}
+
 .team-b {
   background: #EFEEEE;
 }
@@ -4473,14 +4496,25 @@ html.mfp-helper body {
   transition: 0.25s ease-in-out;
 }
 
-.team-card:not(.team-card--big):hover {
+.team-card:not(.team-card--big):hover, .team-card:not(.team-card--small):hover {
   -webkit-box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5);
           box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5);
 }
 
 .team-card--big {
-  background: white;
   max-width: 450px;
+}
+
+.team-card--small {
+  max-width: 210px;
+}
+
+.team-card--small .team-card__content {
+  padding-left: 15px;
+}
+
+.team-card--big, .team-card--small {
+  background: white;
   margin-left: auto;
   -webkit-box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5);
           box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5);
@@ -4584,6 +4618,14 @@ html.mfp-helper body {
 
 .text__tabs a.is-active {
   font-weight: 700;
+}
+
+.text__image {
+  font-size: 0;
+}
+
+.text__image img {
+  max-width: 100%;
 }
 
 .tab {
