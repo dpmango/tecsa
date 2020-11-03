@@ -41,6 +41,7 @@
     "surge": "^0.20.1",
     "svg4everybody": "^2.1.9",
     "swiper": "^5.3.6",
+    "tippy.js": "^6.2.7",
     "viewport-units-buggyfill": "^0.6.2"
   },
   "devDependencies": {

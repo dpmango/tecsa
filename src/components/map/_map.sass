@@ -2,15 +2,18 @@
 .map
   position: relative
   font-size: 0
-  img, picture
+  &__baloons
+    visibility: hidden
+  img, picture, svg
     width: 100%
 
+.js-tippy
+  cursor: pointer
+  transition: opacity .25s $ease
+  &:hover
+    opacity: .7
+
 .map-baloon
-  // TODO - this is test styles
-  // originals should be bvased on tooltip.js positions
-  position: absolute
-  top: 0
-  right: 80px
   max-width: 220px
   background: #FFFFFF
   box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5)

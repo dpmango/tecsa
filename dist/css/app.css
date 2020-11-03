@@ -1,3 +1,4 @@
+@import url(tippy.js/dist/tippy.css);
 .icon-logo {
   background-image: url("../img/sprite.png");
   background-position: 0px 0px;
@@ -4359,14 +4360,26 @@ html.mfp-helper body {
   font-size: 0;
 }
 
-.map img, .map picture {
+.map__baloons {
+  visibility: hidden;
+}
+
+.map img, .map picture, .map svg {
   width: 100%;
 }
 
+.js-tippy {
+  cursor: pointer;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.js-tippy:hover {
+  opacity: .7;
+}
+
 .map-baloon {
-  position: absolute;
-  top: 0;
-  right: 80px;
   max-width: 220px;
   background: #FFFFFF;
   -webkit-box-shadow: 3px 4px 4px 3px rgba(138, 133, 133, 0.5);
